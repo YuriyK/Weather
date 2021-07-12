@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="ListCell" id="gTV-IL-0wX" customClass="ListCell" customModule="Weather" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="355" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="355" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="AwD-IQ-tcs">
+                        <rect key="frame" x="0.0" y="0.0" width="355" height="80"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pc4-gC-E3n">
+                                <rect key="frame" x="16" y="27" width="38" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" insetsLayoutMarginsFromSafeArea="NO" text="°" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rw0-gW-6dH">
+                                <rect key="frame" x="330" y="27" width="9" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="temp" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c36-Es-C2R">
+                                <rect key="frame" x="281" y="27" width="49" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemTealColor"/>
+                        <constraints>
+                            <constraint firstItem="Rw0-gW-6dH" firstAttribute="leading" secondItem="c36-Es-C2R" secondAttribute="trailing" id="5eF-8w-bM2"/>
+                            <constraint firstItem="pc4-gC-E3n" firstAttribute="centerY" secondItem="AwD-IQ-tcs" secondAttribute="centerY" id="QOq-N5-3ia"/>
+                            <constraint firstItem="c36-Es-C2R" firstAttribute="centerY" secondItem="AwD-IQ-tcs" secondAttribute="centerY" id="VrQ-8z-fqk"/>
+                            <constraint firstAttribute="height" constant="80" id="Xjf-Fz-g3j"/>
+                            <constraint firstAttribute="trailing" secondItem="Rw0-gW-6dH" secondAttribute="trailing" constant="16" id="g1h-Xd-Ajh"/>
+                            <constraint firstItem="Rw0-gW-6dH" firstAttribute="centerY" secondItem="AwD-IQ-tcs" secondAttribute="centerY" id="s2W-ym-V6p"/>
+                            <constraint firstItem="pc4-gC-E3n" firstAttribute="leading" secondItem="AwD-IQ-tcs" secondAttribute="leading" constant="16" id="zq8-Sj-Y9Q"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="AwD-IQ-tcs" secondAttribute="trailing" id="3lQ-fN-vnC"/>
+                <constraint firstItem="AwD-IQ-tcs" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GaB-0B-309"/>
+                <constraint firstItem="AwD-IQ-tcs" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="bi6-4I-0sd"/>
+                <constraint firstAttribute="bottom" secondItem="AwD-IQ-tcs" secondAttribute="bottom" id="u6f-I2-wkJ"/>
+            </constraints>
+            <size key="customSize" width="355" height="80"/>
+            <connections>
+                <outlet property="lCity" destination="pc4-gC-E3n" id="P2e-Ju-of8"/>
+                <outlet property="lTemp" destination="c36-Es-C2R" id="G5M-Go-ejL"/>
+                <outlet property="view" destination="AwD-IQ-tcs" id="Zyw-bN-8Fw"/>
+            </connections>
+            <point key="canvasLocation" x="361.59420289855075" y="154.6875"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
